@@ -1,0 +1,53 @@
+Checking for the expected files in the current directory
+easygl.cpp graphics.cpp Main.cpp Node.cpp NodeList.cpp Resistor.cpp ResistorList.cpp Rparser.cpp easygl_constants.h easygl.h graphics.h Node.h NodeList.h Resistor.h ResistorList.h Rparser.h
+Attempting to build your code.  Make output follows:
+==================================================================
+g++ -lX11 -c Main.cpp
+g++ -lX11 -c Rparser.cpp
+g++ -lX11 -c Resistor.cpp
+g++ -lX11 -c Node.cpp
+g++ -lX11 -c ResistorList.cpp
+g++ -lX11 -c NodeList.cpp
+g++ -lX11 -c easygl.cpp
+g++ -lX11 -c graphics.cpp
+g++ -lX11 Main.o Rparser.o Resistor.o Node.o ResistorList.o NodeList.o easygl.o graphics.o -o rnet
+------------------------------------------------------------------
+The build appears to have been successful
+
+Running exercise on the produced executable
+############### Testcase 1 Results ##########################
+Functionality: PASS - Output matches solution
+################# Summary for 1 test(s) #####################
+Functionality: PASS: All tests passed
+
+The required files passed exercise
+
+Submitting files
+
+Verifying submission
+submitece244f -l 7
+total 260
+-rw-r----- 1 submit ece244f   1165 Nov 12 13:08 easygl_constants.h
+-rw-r----- 1 submit ece244f   4918 Nov 12 13:08 easygl.cpp
+-rw-r----- 1 submit ece244f   6477 Nov 12 13:08 easygl.h
+-rw-r----- 1 submit ece244f 157273 Nov 12 13:08 graphics.cpp
+-rw-r----- 1 submit ece244f   8688 Nov 12 13:08 graphics.h
+-rw-r----- 1 submit ece244f    417 Nov 12 13:08 Main.cpp
+-rw-r----- 1 submit ece244f   1251 Nov 12 13:08 Node.cpp
+-rw-r----- 1 submit ece244f    951 Nov 12 13:08 Node.h
+-rw-r----- 1 submit ece244f   9880 Nov 12 13:08 NodeList.cpp
+-rw-r----- 1 submit ece244f   1314 Nov 12 13:08 NodeList.h
+-rw-r----- 1 submit ece244f   1184 Nov 12 13:08 Resistor.cpp
+-rw-r----- 1 submit ece244f    972 Nov 12 13:08 Resistor.h
+-rw-r----- 1 submit ece244f   2063 Nov 12 13:08 ResistorList.cpp
+-rw-r----- 1 submit ece244f    710 Nov 12 13:08 ResistorList.h
+-rw-r----- 1 submit ece244f  11826 Nov 12 13:08 Rparser.cpp
+-rw-r----- 1 submit ece244f   1854 Nov 12 13:08 Rparser.h
+-rw-r----- 1 submit ece244f   2180 Nov 11 16:28 submit_log.1111162852
+-rw-r----- 1 submit ece244f   2250 Nov 11 16:55 submit_log.1111165551
+-rw-r----- 1 submit ece244f   2320 Nov 12 13:08 submit_log.1112130758
+
+All filesizes match. All timestamps match submission time.
+
+Submission was successful
+

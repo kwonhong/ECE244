@@ -1,0 +1,110 @@
+%!PS-Adobe-1.0
+%%DocumentFonts: Helvetica
+%%Pages: 1
+%%HiResBoundingBox: 36.00 166.15 576.00 610.85
+%%EndComments
+/censhow   %draw a centered string
+ { moveto               % move to proper spot
+   dup stringwidth pop  % get x length of string
+   -2 div               % Proper left start
+   yoff rmoveto         % Move left that much and down half font height
+   show newpath } def   % show the string
+
+/setfontsize     % set font to desired size and compute centering yoff
+ { /Helvetica findfont
+   exch scalefont
+   setfont         % Font size set ...
+
+   0 0 moveto      % Get vertical centering offset
+   (Xg) true charpath
+   flattenpath pathbbox
+   /ascent exch def pop -1 mul /descent exch def pop
+   newpath
+   descent ascent sub 2 div /yoff exch def } def
+
+% Next two lines for debugging only.
+/str 20 string def
+/pnum {str cvs print (  ) print} def
+/drawline      % draw a line from (x2,y2) to (x1,y1)
+ { moveto lineto stroke } def
+
+/rect          % outline a rectangle 
+ { /y2 exch def /x2 exch def /y1 exch def /x1 exch def
+   x1 y1 moveto
+   x2 y1 lineto
+   x2 y2 lineto
+   x1 y2 lineto
+   closepath } def
+
+/drawrect      % draw outline of a rectanagle
+ { rect stroke } def
+
+/fillrect      % fill in a rectanagle
+ { rect fill } def
+
+/drawarc { arc stroke } def           % draw an arc
+/drawarcn { arcn stroke } def         % draw an arc in the opposite direction
+
+%Fill a counterclockwise or clockwise arc sector, respectively.
+/fillarc { moveto currentpoint 5 2 roll arc closepath fill } def
+/fillarcn { moveto currentpoint 5 2 roll arcn closepath fill } def
+
+/fillpoly { 3 1 roll moveto         % move to first point
+   2 exch 1 exch {pop lineto} for   % line to all other points
+   closepath fill } def
+
+%Color Definitions:
+/white { 1 setgray } def
+/black { 0 setgray } def
+/grey55 { .55 setgray } def
+/grey75 { .75 setgray } def
+/blue { 0 0 1 setrgbcolor } def
+/green { 0 1 0 setrgbcolor } def
+/yellow { 1 1 0 setrgbcolor } def
+/cyan { 0 1 1 setrgbcolor } def
+/red { 1 0 0 setrgbcolor } def
+/pink { 1 0.75 0.8 setrgbcolor } def
+/lightpink { 1 0.71 0.76 setrgbcolor } def
+/darkgreen { 0 0.5 0 setrgbcolor } def
+/magenta { 1 0 1 setrgbcolor } def
+/bisque { 1 0.89 0.77 setrgbcolor } def
+/lightskyblue { 0.53 0.81 0.98 setrgbcolor } def
+/thistle { 0.85 0.75 0.85 setrgbcolor } def
+/plum { 0.87 0.63 0.87 setrgbcolor } def
+/khaki { 0.94 0.9 0.55 setrgbcolor } def
+/coral { 1 0.5 0.31 setrgbcolor } def
+/turquoise { 0.25 0.88 0.82 setrgbcolor } def
+/mediumpurple { 0.58 0.44 0.86 setrgbcolor } def
+/darkslateblue { 0.28 0.24 0.55 setrgbcolor } def
+/darkkhaki { 0.74 0.72 0.42 setrgbcolor } def
+
+%Solid and dashed line definitions:
+/linesolid {[] 0 setdash} def
+/linedashed {[3 3] 0 setdash} def
+
+%%EndProlog
+%%Page: 1 1
+
+black
+linesolid
+0 setlinewidth
+12 setfontsize
+10 setfontsize
+(Checking for events -- window active and responsive.) 306.00 173.15 censhow
+12 setfontsize
+36.00 181.15 576.00 610.85 rect clip newpath
+
+white
+clippath fill
+
+black
+36.00 261.00 113.14 531.00 drawrect
+113.14 261.00 190.29 531.00 drawrect
+190.29 261.00 267.43 531.00 drawrect
+267.43 261.00 344.57 531.00 drawrect
+344.57 261.00 421.71 531.00 drawrect
+421.71 261.00 498.86 531.00 drawrect
+498.86 261.00 576.00 531.00 drawrect
+showpage
+
+%%Trailer

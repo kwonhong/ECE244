@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Circle.h</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Polygon.h</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Rectangle.h</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Shape.h</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/ShapeArray.h</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Triangle.h</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/easygl.h</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/easygl_constants.h</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/graphics.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Circle.cpp</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Main.cpp</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Polygon.cpp</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Rectangle.cpp</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Shape.cpp</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/ShapeArray.cpp</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/Triangle.cpp</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/easygl.cpp</itemPath>
+      <itemPath>/u/a/kwonhong/Desktop/Lab6/graphics.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <commandLine>-lX11</commandLine>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>

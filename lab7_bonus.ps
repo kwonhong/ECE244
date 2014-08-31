@@ -1,0 +1,129 @@
+%!PS-Adobe-1.0
+%%DocumentFonts: Helvetica
+%%Pages: 1
+%%HiResBoundingBox: 36.00 166.15 576.00 610.85
+%%EndComments
+/censhow   %draw a centered string
+ { moveto               % move to proper spot
+   dup stringwidth pop  % get x length of string
+   -2 div               % Proper left start
+   yoff rmoveto         % Move left that much and down half font height
+   show newpath } def   % show the string
+
+/setfontsize     % set font to desired size and compute centering yoff
+ { /Helvetica findfont
+   exch scalefont
+   setfont         % Font size set ...
+
+   0 0 moveto      % Get vertical centering offset
+   (Xg) true charpath
+   flattenpath pathbbox
+   /ascent exch def pop -1 mul /descent exch def pop
+   newpath
+   descent ascent sub 2 div /yoff exch def } def
+
+% Next two lines for debugging only.
+/str 20 string def
+/pnum {str cvs print (  ) print} def
+/drawline      % draw a line from (x2,y2) to (x1,y1)
+ { moveto lineto stroke } def
+
+/rect          % outline a rectangle 
+ { /y2 exch def /x2 exch def /y1 exch def /x1 exch def
+   x1 y1 moveto
+   x2 y1 lineto
+   x2 y2 lineto
+   x1 y2 lineto
+   closepath } def
+
+/drawrect      % draw outline of a rectanagle
+ { rect stroke } def
+
+/fillrect      % fill in a rectanagle
+ { rect fill } def
+
+/drawarc { arc stroke } def           % draw an arc
+/drawarcn { arcn stroke } def         % draw an arc in the opposite direction
+
+%Fill a counterclockwise or clockwise arc sector, respectively.
+/fillarc { moveto currentpoint 5 2 roll arc closepath fill } def
+/fillarcn { moveto currentpoint 5 2 roll arcn closepath fill } def
+
+/fillpoly { 3 1 roll moveto         % move to first point
+   2 exch 1 exch {pop lineto} for   % line to all other points
+   closepath fill } def
+
+%Color Definitions:
+/white { 1 setgray } def
+/black { 0 setgray } def
+/grey55 { .55 setgray } def
+/grey75 { .75 setgray } def
+/blue { 0 0 1 setrgbcolor } def
+/green { 0 1 0 setrgbcolor } def
+/yellow { 1 1 0 setrgbcolor } def
+/cyan { 0 1 1 setrgbcolor } def
+/red { 1 0 0 setrgbcolor } def
+/darkgreen { 0 0.5 0 setrgbcolor } def
+/magenta { 1 0 1 setrgbcolor } def
+
+%Solid and dashed line definitions:
+/linesolid {[] 0 setdash} def
+/linedashed {[3 3] 0 setdash} def
+
+%%EndProlog
+%%Page: 1 1
+
+black
+linesolid
+0 setlinewidth
+12 setfontsize
+10 setfontsize
+(Window active: (1) click on a shape, then (2) click to move its center) 306.00 173.15 censhow
+12 setfontsize
+36.00 181.15 576.00 610.85 rect clip newpath
+
+white
+clippath fill
+
+black
+yellow
+gsave
+337.99 467.93 translate
+1.00 1 scale
+90.64 0.00 360.00 0 0 fillarc
+grestore
+blue
+gsave
+302.81 508.13 translate
+1.00 1 scale
+22.11 0.00 360.00 0 0 fillarc
+grestore
+gsave
+373.16 508.13 translate
+1.00 1 scale
+22.11 0.00 360.00 0 0 fillarc
+grestore
+red
+
+368.14 414.66
+391.26 432.75
+368.14 421.70
+307.83 421.70
+284.72 432.75
+307.83 407.63
+6 fillpoly
+black
+267.63 558.39 408.34 538.28 fillrect
+
+388.24 558.39
+337.99 598.59
+287.73 558.39
+3 fillpoly
+gsave
+287.73 216.66 translate
+1.00 1 scale
+3.02 0.00 360.00 0 0 fillarc
+grestore
+showpage
+
+%%Trailer
